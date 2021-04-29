@@ -1,6 +1,6 @@
 # Travel Web App
 
-A travel web appliation for users to get inspiration for possible travel destinations, and to share their travel experiences with others.
+A travel web application for users to get inspiration for possible travel destinations, and to share their travel experiences with others.
 Built for an exam project at (Web Development, UCN).
 
 # Technologies:
