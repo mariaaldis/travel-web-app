@@ -1,0 +1,74 @@
+ <section class="top-container">
+    <h1 class="container">Edit Profile</h1>
+</section>
+
+<div class="container">
+    {{>messages}}
+</div>
+
+<form action="/edit/{{user._id}}" method="POST" enctype="multipart/form-data" class="container  form-container">
+    <input type="hidden" name="_id" value="{{user._id}}">
+
+    <div class="form-flex">
+        <label for="name">Name</label>
+        <input 
+            type="text"
+            id="name"
+            name="name" 
+            placeholder="Enter Name",
+            value="{{user.name}}" 
+        />
+    </div>
+
+    <div class="form-flex">
+        <label for="username">Username</label>
+        <input 
+            type="text"
+            id="username"
+            name="username" 
+            placeholder="Enter Username",
+            value="{{user.username}}" 
+        />
+    </div>
+
+    <div class="form-flex">
+        <label for="descritpion">Description</label>
+        <textarea 
+            type="text"
+            id="description"
+            name="description" 
+            placeholder="Enter Description",
+            value="" 
+        >{{user.description}}</textarea>
+    </div>
+
+    <div class="form-flex">
+        <label for="descritpion">Location</label>
+        <input 
+            type="text"
+            id="location"
+            name="location" 
+            placeholder="Enter Location",
+            value="{{user.location}}" 
+        />
+    </div>
+
+    <div class="form-flex">
+        <h6> Profile Image </h6>
+        <label for="profileImg" class="uploadImg" id="profileImgLabel">Trip Image</label>
+        <input 
+            type="file" accept="image/png, image/jpg, image/jpeg"
+            id="profileImg"
+            name="profileImg" 
+            class="tripImgInput"
+            placeholder="Upload Profile Image"
+            value="" 
+            style="display:none;"
+        />
+    </div>
+
+
+
+    <button type="submit">Update Profile</button>
+</form>
+{{> nav}}

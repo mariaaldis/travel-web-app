@@ -1,0 +1,37 @@
+<section class="login-flex">
+    <div class="login-div">
+        <h1>Travigo</h1>
+        <h3>Login</h3>
+    </div>
+
+    <div class="container container-login">
+        <form action="/" method="POST" enctype="application/json">
+            {{>messages}}
+            <div class="form-flex">
+                <label for="username">Username</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username" 
+                    placeholder="Enter username" 
+                    value="{{username}}"
+                />
+            </div>
+
+            <div class="form-flex">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Enter password" 
+                    value="{{password}}"
+                />
+            </div>
+
+            <button type="submit">Login</button>
+        </form> 
+        
+        <p>Don't have an account? <a href="/register" class="register-a"> Register here</a></p> 
+    </div>
+</section>
